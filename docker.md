@@ -41,6 +41,7 @@ Docker images act as a set of instructions to build a Docker container. It can b
 Docker ADD can copy the files from a URL unlike Docker COPY which can only copy files from host system into the container.
 
 `7. What is the difference between CMD and ENTRYPOINT?`
+
 **CMD:** Sets default parameters that can be overridden from the Docker Command Line Interface (CLI) when a container is running.
 **ENTRYPOINT:** Default parameters that cannot be overridden when Docker Containers run with CLI parameters
 
@@ -71,7 +72,13 @@ COPY --from=build /app /app
 Distro-less images contain only your application and its runtime dependencies with a very minimum operating system libraries. They do not contain package managers, shells or any other programs you would expect to find in a standard Linux distribution.
 They are very small and lightweight images.
 
+`11. What is the difference between PUBLISH and EXPOSE`
 
+- If you specify neither **"expose"** nor **"-p"**, the service in the container will only be accessible from inside the container.
+- If you **"expose"** a port, the service in the container is not accessible from outside docker, (container-to-container)this is good for inter-container communication.
+- If you **"expose"** and **"-p"** a port, the service in the container is accessible from anywhere, even outside docker.
+- If you do **"-p"** but do not **"expose"** docker does an implicit expose. This is because if a port is open to the public, it is automatically also open to the other docker containers. Hence **"-p"** includes **"expose"**.
+  
 `11. Real time Challenges with Docker?`
 
 - Docker is a single daemon process. Which can cause a single point of failure, If the Docker daemon goes down for some reason all the application are down.
