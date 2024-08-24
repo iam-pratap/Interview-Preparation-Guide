@@ -37,9 +37,15 @@ Docker images act as a set of instructions to build a Docker container. It can b
 ![Screenshot 2023-02-08 at 4 32 13 PM](https://user-images.githubusercontent.com/43399466/217511949-81f897b2-70ee-41d1-b229-38d0572c54c7.png)
 
 `6. What is the difference between docker COPY and docker ADD`
+
 Docker ADD can copy the files from a URL unlike Docker COPY which can only copy files from host system into the container.
 
+`7. What is the difference between CMD and ENTRYPOINT?`
+**CMD:** Sets default parameters that can be overridden from the Docker Command Line Interface (CLI) when a container is running.
+**ENTRYPOINT:** Default parameters that cannot be overridden when Docker Containers run with CLI parameters
+
 `8. what are the networking types in Docker and what is the default?`
+
 The default networking in Docker is Bridge
 Howerver, you can change the default type and configure one of the
 1. Bridge
@@ -48,6 +54,7 @@ Howerver, you can change the default type and configure one of the
 4. MacVlan 
 
 `9. What is a Multi-stage Build in Docker?`
+
 Multi-stage build allows you to build your docker container in multiple stages allowing you to copy artifacts from previous stages for reducing the final image size.
 Example of Dockerfile with multi-stage build:
 ```
@@ -60,6 +67,7 @@ COPY --from=build /app /app
 ```
 
 `10. What are distro less images in Docker?`
+
 Distro-less images contain only your application and its runtime dependencies with a very minimum operating system libraries. They do not contain package managers, shells or any other programs you would expect to find in a standard Linux distribution.
 They are very small and lightweight images.
 
