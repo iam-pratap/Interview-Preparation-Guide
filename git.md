@@ -42,7 +42,12 @@ The ‘.gitignore’ file tells Git which files and folders to ignore when track
 
 ‘git pull‘ fetches the updates from the remote repository and instantly strives to merge them into your current branch. It is basically a union of ‘git fetch’ followed by ‘git merge’ .
 
-`8. How do you check the 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀 between 𝘁𝘄𝗼 𝗰𝗼𝗺𝗺𝗶𝘁𝘀 in Git?`
+`8. What is the difference between git revert and git reset?`
+
+**Git revert:** When you want to undo a specific commit while preserving the history, especially if the commit has already been shared with others.
+**Git reset:** Use when you need to modify the branch's HEAD pointer, such as when you've made a mistake or want to experiment with different versions.
+
+`9. How do you check the 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀 between 𝘁𝘄𝗼 𝗰𝗼𝗺𝗺𝗶𝘁𝘀 in Git?`
 
 It compares the changes between the specified commits.
 Syntax:
@@ -50,21 +55,16 @@ Syntax:
 git diff <commit1> <commit2>
 ```
 
-`9. How do you check the 𝘀𝘁𝗮𝘁𝘂𝘀 of the 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗱𝗶𝗿𝗲𝗰𝘁𝗼𝗿𝘆 in Git?`
+`10. How do you check the 𝘀𝘁𝗮𝘁𝘂𝘀 of the 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗱𝗶𝗿𝗲𝗰𝘁𝗼𝗿𝘆 in Git?`
 
 git status
 
-`10. How to resolve a conflict in Git?`
+`11. How to resolve a conflict in Git?`
 
 **Identify Conflicting Files:** Use ‘git status’ to find the files where conflicts have take place because of changes from unique branches.
 **Correct Files to Repair Conflicts:** Alter the files to sync conflicting changes and block future conflicts.
 **Stage solved Files:** Use ‘git add’ to add the resolved files to the staging area. 
 **Commit the Changes:** Complete the process by committing the changed files applying ‘git commit’.
-
-`11. What is the difference between git revert and git reset?`
-
-**Git revert:** When you want to undo a specific commit while preserving the history, especially if the commit has already been shared with others.
-**Git reset:** Use when you need to modify the branch's HEAD pointer, such as when you've made a mistake or want to experiment with different versions.
 
 `12. What is the HEAD in Git?`
 
