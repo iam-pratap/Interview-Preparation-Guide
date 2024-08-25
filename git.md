@@ -60,3 +60,12 @@ git status
 **Correct Files to Repair Conflicts:** Alter the files to sync conflicting changes and block future conflicts.
 **Stage solved Files:** Use ‘git add’ to add the resolved files to the staging area. 
 **Commit the Changes:** Complete the process by committing the changed files applying ‘git commit’.
+
+`11. What is the difference between git revert and git reset?`
+
+**Git revert:** When you want to undo a specific commit while preserving the history, especially if the commit has already been shared with others.
+**Git reset:** Use when you need to modify the branch's HEAD pointer, such as when you've made a mistake or want to experiment with different versions.
+
+`12. What is the HEAD in Git?`
+
+HEAD is a source to the current branch or commit you are working on. HEAD normally shows the recent commit of the current branch and moves when you switch branches or check out exact commits.
