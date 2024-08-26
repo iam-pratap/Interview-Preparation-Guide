@@ -34,18 +34,37 @@ The ‘.gitignore’ file tells Git which files and folders to ignore when track
 
 `6.Explain the difference between "git merge" and "git rebase"?`
 
-‘git merge‘ merges changes from one branch into another, keeping distinguish branch histories. It forms merge commits that directly show where branches came together. ‘git rebase‘ reforms history by using commits from one branch onto another, causing in a linear sequence of commits. Prefer ‘merge’ to keep distinct branch timelines and use ‘rebase’ for enhancing commit history before merging branches.
+**Git Merge**
+- It is best suited for merging changes from a feature branch into the main branch.
+- Creates a merge commit that has two parent commits.
+- Preserves the branch history of both branches.
+
+**Git Rebase**
+- It is best suited for keeping a clean and linear commit history.
+- Rewrites the commit history and creates a linear history with one branch.
+- Discards the branch history of the current branch.
 
 `7. What is the difference between git fetch and git pull?`
 
-‘git fetch’ fetches updates from a remote repository but does not combine them into your local repository. It fetches all the new data from the remote repository that you don’t have yet, but it stores it in a separate area, permitting you to review the changes before merging them into your working directory.
+**Git Fetch**
+- Used to fetch all changes from the remote repository to the local repository without merging into the current working directory.
+- Inspect remote changes, create new branches, update tracking branches.
 
-‘git pull‘ fetches the updates from the remote repository and instantly strives to merge them into your current branch. It is basically a union of ‘git fetch’ followed by ‘git merge’ .
+**Git Pull**
+- Brings the copy of all the changes from a remote repository and merges them into the current working directory.
+- Update local branch with remote changes.
 
 `8. What is the difference between git revert and git reset?`
 
-**Git revert:** When you want to undo a specific commit while preserving the history, especially if the commit has already been shared with others.
-**Git reset:** Use when you need to modify the branch's HEAD pointer, such as when you've made a mistake or want to experiment with different versions.
+**Git Revert:** 
+- It can be used to undo accidental changes or correct changes made while working with others.
+- Preserves the commit history by creating a new commit that undoes the change.
+- It is a safer option when working with other developers because it doesn’t affect others’ work.
+
+**Git Reset**
+- It is more suitable for editing your local changes and cleaning up the commit history.
+- Rewrites the commit history by undoing the operations.
+- It can cause other developers to lose history and have conflicts in their work.
 
 `9. How do you check the 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀 between 𝘁𝘄𝗼 𝗰𝗼𝗺𝗺𝗶𝘁𝘀 in Git?`
 
@@ -69,3 +88,5 @@ git status
 `12. What is the HEAD in Git?`
 
 HEAD is a source to the current branch or commit you are working on. HEAD normally shows the recent commit of the current branch and moves when you switch branches or check out exact commits.
+
+`13. Explain Git branching strategy`
