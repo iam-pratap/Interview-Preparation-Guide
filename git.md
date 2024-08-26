@@ -90,3 +90,7 @@ git status
 HEAD is a source to the current branch or commit you are working on. HEAD normally shows the recent commit of the current branch and moves when you switch branches or check out exact commits.
 
 `13. Explain Git branching strategy`
+
+Let's consider Uber as an example. Initially, they focused solely on cab services, and their code repository was hosted on GitHub. Eventually, the product manager proposed expanding Uber to include intercity travel. To accommodate this new feature, a new branch named intercity@feature was created. Developers worked on this branch, implementing the necessary changes. Once the feature was deemed ready, the changes were merged back into the main master branch.
+
+Assuming Uber was currently on version 2, and they wanted to release a new version, they created a release branch named release-v3 from the latest master branch. This release branch underwent rigorous testing before being deployed to customers. After three days, bug was reported after the deployment, a hotfix branch would be created to address the issue. This hotfix branch would then be merged into both the master and release-v3 branches to ensure the fix was applied to all relevant versions.
