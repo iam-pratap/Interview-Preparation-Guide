@@ -69,6 +69,7 @@ The ‘.gitignore’ file tells Git which files and folders to ignore when track
 `9. How do you check the 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀 between 𝘁𝘄𝗼 𝗰𝗼𝗺𝗺𝗶𝘁𝘀 in Git?`
 
 It compares the changes between the specified commits.
+
 Syntax:
 ```
 git diff <commit1> <commit2>
@@ -78,19 +79,43 @@ git diff <commit1> <commit2>
 
 git status
 
-`11. How to resolve a conflict in Git?`
+`11. What is Git conflict?`
+
+When same name file having different content in different branches, if you do merge, conflicts occur
+solution-->resolve conflict then add and commit
+
+`12. How to resolve a conflict in Git?`
 
 **Identify Conflicting Files:** Use ‘git status’ to find the files where conflicts have take place because of changes from unique branches.
+
 **Correct Files to Repair Conflicts:** Alter the files to sync conflicting changes and block future conflicts.
-**Stage solved Files:** Use ‘git add’ to add the resolved files to the staging area. 
+
+**Stage solved Files:** Use ‘git add’ to add the resolved files to the staging area.
+
 **Commit the Changes:** Complete the process by committing the changed files applying ‘git commit’.
 
-`12. What is the HEAD in Git?`
+`13. What is the HEAD in Git?`
 
 HEAD is a source to the current branch or commit you are working on. HEAD normally shows the recent commit of the current branch and moves when you switch branches or check out exact commits.
 
-`13. Explain Git branching strategy`
+`14. Explain Git branching strategy`
 
 Let's consider Uber as an example. Initially, they focused solely on cab services, and their code repository was hosted on GitHub. Eventually, the product manager proposed expanding Uber to include intercity travel. To accommodate this new feature, a new branch named intercity@feature was created. Developers worked on this branch, implementing the necessary changes. Once the feature was deemed ready, the changes were merged back into the main master branch.
 
 Assuming Uber was currently on version 2, and they wanted to release a new version, they created a release branch named release-v3 from the latest master branch. This release branch underwent rigorous testing before being deployed to customers. After three days, bug was reported after the deployment, a hotfix branch would be created to address the issue. This hotfix branch would then be merged into both the master and release-v3 branches to ensure the fix was applied to all relevant versions.
+
+`15. from which branch do you usually perform releases?`
+
+Release branch
+
+`16. what is feature branch?`
+
+whenever some people want to introduce new breaking changes to your existing functionality you create feature branches.
+
+`17. which branch that always is updated and up-to-date?`
+
+master, main and trunk branch
+
+`18. what is hotfix branch?`
+
+is a temporary branch created to address critical bugs in a production environment. 
