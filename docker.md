@@ -92,5 +92,9 @@ Some of the steps:
 - Ensure that the networking is configured properly. This is one of the most common reasons for security issues. If required configure custom bridge networks and assign them ti isolate containers.
 - Use utilities like Sync to scan your container images. 
 
+`13. What are the Production issue that you faced with docker containers and how did you silve it?`
+Previously we were using ubuntu base images or previously we were using even in the final stage we were using ubuntu images or python runtime or any other other runtime images which were exposed to some kind of vulnerabilities by hackers or you know people usually find some kind of issues with this images so we move to distro less images. we move to a python distroless images which only had python runtime and because of which like it even did not have some basic packages like find ls wget  curl so it was providing us highest level of security after implementing distroless images we are safe to say that our applications are not exposed to any os or operating system
+related vulnerabilities.
+
 
 
