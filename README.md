@@ -8,4 +8,4 @@ Content related to:
 3. linux
 4. AWS
 5. Git, GitHub
-   
+6. Shell scripting
