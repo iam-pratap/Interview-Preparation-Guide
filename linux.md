@@ -47,6 +47,8 @@ Default umask value→022
 
 `7. What is load average?`
 
+ A metric that measures the average system load over a certain period.
+
 `8. How to check the open ports in linux`
 
 Type the following netstat command:
