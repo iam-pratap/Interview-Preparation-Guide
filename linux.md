@@ -61,5 +61,7 @@ A Process is a program, application, or command that is running in the terminal.
 
 `10. What is df and du?`
 
+**du** measures the disk space used by files and directories, while **df** reports on the total, used, and available space on a file system:
+
 `11. Explain LILO?`
 LILO, i.e., Linux Loader and is a Linux Boot loader. It loads the Linux operating system into memory and starts the execution. Most operating systems like Windows and macOS come with a bootloader. While in Linux, you need to install a separate boot loader, and LILO is one of the Linux boot loaders.
