@@ -9,3 +9,5 @@ Content related to:
 4. AWS
 5. Git, GitHub
 6. Shell scripting
+7. Terraform
+8. Networking concepts
