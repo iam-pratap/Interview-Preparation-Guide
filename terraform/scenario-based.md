@@ -93,3 +93,40 @@ provider "azurerm" {
 2. Create Terraform code with separate modules for AWS and Azure resources.
 
 <img src="https://github.com/user-attachments/assets/6b79603a-294e-4ab9-bebd-92c375d24997" width="500" height="200">
+
+`8. You have 20 servers created through Terraform but you want to delete one of them. Is it possible to destroy a single resource out of multiple resources using Terraform?`
+
+Yes, it is possible. We can use the terraform destroy -target command followed by the resource type and name to destroy a specific resource.
+
+Here's an example:
+
+```bash
+terraform destroy -target=aws_instance.my_instance
+```
+
+In this example, only the AWS instance named **`my_instance`** would be destroyed, leaving other resources managed by Terraform intact.
+
+`9. Your infrastructure contains database passwords and other sensitive information. How can you manage secrets and sensitive data in Terraform?`
+
+Managing secrets and sensitive data in Terraform require careful consideration to ensure security. Best practices include:
+
+- Never Hardcode secrets in your Terraform code
+- Storing secrets outside of version-controlled files, using tools like HashiCorp Vault or cloud-specific secret management services.
+- Utilizing Terraform input variables or environment variables to pass sensitive values securely during runtime.
+
+By following these practices, you can protect sensitive information and minimize the risk of exposing secrets unintentionally.
+
+`10. If Your company is looking ways to enable HA. How can you perform blue-green deployments using Terraform?`
+
+- **Blue-Green Deployments in Terraform:**
+    - **Concept:** Involves creating two identical environments: blue and green.
+    - **Implementation:** Terraform facilitates this by defining two sets of infrastructure resources with slight variations.
+    - **Example:** Different AWS Auto Scaling Groups or Azure Virtual Machine Scale Sets for blue and green environments.
+    - **Deployment Process:**
+        1. **Provisioning:** Create the new environment (green) alongside the existing one (blue).
+        2. **Testing:** Validate the green environment to ensure it functions correctly.
+        3. **Traffic Switching:** Update the load balancer or DNS records to route traffic from blue to green.
+           
+<img src="https://github.com/user-attachments/assets/9c1b88d3-fc9e-4693-8e8e-a55ecc2890d5" width="600" height="350">
+
+Reference: https://developer.hashicorp.com/terraform/tutorials/aws/blue-green-canary-tests-deployments
