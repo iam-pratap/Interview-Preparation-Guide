@@ -53,12 +53,11 @@ State file is like a blueprint that stores information about the infrastructure 
 
 It's crucial because it helps Terraform understand what's already set up and what changes need to be made. By comparing the desired setup with the current one in the state file, Terraform can make accurate updates to your infrastructure.
 
-![Untitled (4)](https://github.com/user-attachments/assets/3228b1b4-0df8-4f72-af4c-69d24f3777e5)
+<img src="https://github.com/user-attachments/assets/3228b1b4-0df8-4f72-af4c-69d24f3777e5" width="600" height="300">
 
+`5. If Jr DevOps Engineer accidently deleted the state file, what steps should we take to resolve this?`
 
-`5. Jr DevOps Engineer accidently deleted the state file, what steps should we take to resolve this?`
-
-Answer: If the state file is lost
+If the state file is lost
 
 1. **Recover Backup**: If available, restore the state file from a recent backup.
 2. **Recreate State**: If no backup exists, manually reconstruct the state by inspecting existing infrastructure and using `terraform import` for missing resources.
@@ -93,4 +92,4 @@ provider "azurerm" {
 ```
 2. Create Terraform code with separate modules for AWS and Azure resources.
 
-![Untitled (5)](https://github.com/user-attachments/assets/6b79603a-294e-4ab9-bebd-92c375d24997)
+<img src="https://github.com/user-attachments/assets/6b79603a-294e-4ab9-bebd-92c375d24997" width="500" height="200">
