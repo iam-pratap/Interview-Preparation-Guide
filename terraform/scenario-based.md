@@ -4,35 +4,46 @@ Terraform is an IaC tool that lets you write code to define and manage your infr
 
 You describe your desired infrastructure in configuration files, Terraform figures out what needs to be done to achieve that state, and then it makes it happen by interacting with cloud providers or other infrastructure platforms.
 
-![Untitled](https://github.com/user-attachments/assets/691bbdfa-b6e4-458d-8a05-f11ddd18d73a)
+<img src="https://github.com/user-attachments/assets/691bbdfa-b6e4-458d-8a05-f11ddd18d73a" width="600" height="450">
+
 
 `2. A DevOps Engineer manually created infrastructure on AWS, and now there is a requirement to use Terraform to manage it. How would you import these resources in Terraform code?`
 
 To import existing AWS resources into Terraform, you can follow  these steps:
 
 1. Write Terraform configuration for the resources you want to manage.
-2. Run `terraform import` command for each resource, specifying the resource type and its unique identifier in AWS.
+`main.tf`
+```
+provider "aws" {
+    region = "ap-south-1"
+}
 
-For example:
+import {
+  id = "i-04cada09773b9e67a"
+  to = aws_instance.example
+}
+```
+2. Run `terraform plan -generate-config-out="generated_bucket.tf"` command, using this terraform code is copied to `generated_resources.tf` file.
+3. Then copy the code from generated_resources.tf to main.tf file.
+4. Run `terraform import` command for each resource, specifying the resource type and its unique identifier in AWS.
 
 ```bash
-terraform import aws_instance.example i-1234567890abcdef0
+terraform import aws_instance.example <resources-id>
 ```
 
 Repeat this process for each resource you want to manage with Terraform.
 
-![Untitled (1)](https://github.com/user-attachments/assets/58114ea4-cd7d-4a52-9421-ed6d798c2722)
+<img src="https://github.com/user-attachments/assets/58114ea4-cd7d-4a52-9421-ed6d798c2722" width="600" height="250">
 
 `3. You have multiple environments - dev, stage, prod for your application and you want to use the same code for all of these environment. How can you do that?`
 
 1. **Terraform Modules**: Code templates for infrastructure components. You define them once, and then you can use them with different configurations for various environments by passing in different parameters.
 
-![Untitled (2)](https://github.com/user-attachments/assets/b7b30424-1a84-450c-bcd3-0d94f68a885b)
+<img src="https://github.com/user-attachments/assets/b7b30424-1a84-450c-bcd3-0d94f68a885b" width="600" height="650">
 
+2. **Terraform Workspaces**: Provide a way to manage separate states for the same set of configuration files. Each workspace maintains its own state, allowing you to work on different environments concurrently without interfering with each other.
 
-Terraform Workspaces: Provide a way to manage separate states for the same set of configuration files. Each workspace maintains its own state, allowing you to work on different environments concurrently without interfering with each other.
-![Untitled (3)](https://github.com/user-attachments/assets/9792006e-b4ba-455d-8e18-9b3870e6ddae)
-
+<img src="https://github.com/user-attachments/assets/9792006e-b4ba-455d-8e18-9b3870e6ddae" width="600" height="300">
 
 `4. What is the Terraform state file, and why is it important?`
 
