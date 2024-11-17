@@ -49,6 +49,8 @@ Default umask value→022
 
  A metric that measures the average system load over a certain period.
 
+ Cmd--> uptime or cat /proc/loadavg
+
 `8. How to check the open ports in linux`
 
 Type the following netstat command:
@@ -64,4 +66,5 @@ A Process is a program, application, or command that is running in the terminal.
 **du** measures the disk space used by files and directories, while **df** reports on the total, used, and available space on a file system:
 
 `11. Explain LILO?`
+
 LILO, i.e., Linux Loader and is a Linux Boot loader. It loads the Linux operating system into memory and starts the execution. Most operating systems like Windows and macOS come with a bootloader. While in Linux, you need to install a separate boot loader, and LILO is one of the Linux boot loaders.
