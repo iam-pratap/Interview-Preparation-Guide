@@ -48,9 +48,9 @@ Default umask value→022
 `7. What is load average?`
 
  A metric that measures the average system load over a certain period.
-
- Cmd--> uptime or cat /proc/loadavg
-
+```
+uptime or cat /proc/loadavg
+```
 `8. How to check the open ports in linux`
 
 Type the following netstat command:
@@ -110,3 +110,30 @@ It is used to combine multiple files into one.
 
 tar --> Tape Archive
 
+syntax:
+
+1. Create a tar file
+```
+tar -cvf file.tar file
+```
+result:- file.tar
+
+c - create, v - verbose, f - forcefully, file.tar - taget, file - source
+
+2. Compress a file 
+```
+gzip file.tar
+```
+result: file.tar.gz
+
+3. Uncompress a file
+```
+gunzip file.tar.gz
+```
+result:- file.tar
+
+4. Extract a file
+```
+tar -xvf file.tar
+```
+result:- file
