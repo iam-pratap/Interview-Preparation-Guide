@@ -86,3 +86,27 @@ The "free" command displays information about the system's memory usage, includi
 `15. How do you find the IP address of a Linux system?`
 
 The "ifconfig" command displays network interface information, including IP addresses assigned to the system.
+
+`16. Difference between process and thread`
+
+**Process** 
+- A process is an instance of a program that is being executed.
+- It is independent because it does not share memory.
+
+**Thread**
+- A thread is the subset of a process and is also known as the lightweight process.
+- It depends on other threads because they share some memory with other threads.
+
+`17. How to check the information about OS`
+
+command
+```
+cat /etc/os-release
+```
+
+`18. What is 'tar' command used for in linux, and how would you create  and extract tar archives ?`
+
+It is used to combine multiple files into one.
+
+tar --> Tape Archive
+
