@@ -68,3 +68,21 @@ A Process is a program, application, or command that is running in the terminal.
 `11. Explain LILO?`
 
 LILO, i.e., Linux Loader and is a Linux Boot loader. It loads the Linux operating system into memory and starts the execution. Most operating systems like Windows and macOS come with a bootloader. While in Linux, you need to install a separate boot loader, and LILO is one of the Linux boot loaders.
+
+`12.  How do you check the network connectivity in Linux?`
+
+The "ping" command is used to check network connectivity between your machine and a remote host.
+```
+ping <hostname> 
+```
+`13.  How do you monitor system performance in Linux?`
+
+The "top" command is commonly used to monitor system performance in real-time. It displays information about CPU usage, memory usage, running processes, and more.
+
+`14. How can you check the memory usage of a Linux system?`
+
+The "free" command displays information about the system's memory usage, including total memory, used memory, free memory, and swap usage.
+
+`15. How do you find the IP address of a Linux system?`
+
+The "ifconfig" command displays network interface information, including IP addresses assigned to the system.
