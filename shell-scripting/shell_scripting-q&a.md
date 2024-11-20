@@ -22,11 +22,12 @@
 #divisible by 3, divisible by 5, not 3*5=15
 
 for i in {1..100}; do
-if ([`expr $i%3 == 0`] || [`expr $i%5 == 0`]) && [`expr $i%15 != 0`];
+if ([ `expr $i % 3` == 0 ] || [ `expr $i % 5` == 0 ]) && [ `expr $i % 15` != 0 ];
 then
        echo $i
 fi;
 done
+
 ```
 
 `Write a script to print the number of "S" in Mississippi`
