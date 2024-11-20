@@ -446,3 +446,43 @@ Edit the crontab
 crontab -e
 ```
 `14. Difference between BREAK and CONTINUE Statement ?`
+
+Break terminates the entire loop, while continue skips the current iteration and proceeds to the next one.
+
+Bash
+#!/bin/bash
+
+# Break example
+for i in {1..10}
+do
+    if [ $i -eq 5 ]
+    then
+        break
+    fi
+    echo $i
+done
+
+# Continue example
+for i in {1..10}
+do
+    if [ $i -eq 5 ]
+    then
+        continue
+    fi
+    echo $i
+done
+Use code with caution.
+
+Explanation:
+
+Break:
+
+When the loop counter i reaches 5, the break statement is executed.
+This immediately terminates the entire for loop.
+The numbers 1 to 4 will be printed, and the loop will exit.
+Continue:
+
+When the loop counter i reaches 5, the continue statement is executed.
+This skips the remaining part of the current iteration.
+The loop proceeds to the next iteration, and the number 5 will not be printed.
+The numbers 1 to 4, 6 to 10 will be printed.
