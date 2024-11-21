@@ -53,9 +53,7 @@ My name is honey
 `5. Why are you using shell scripting?`
 
 I have automated all the node health of my virtual machines so we have some close to thousand machines and every time it is difficult to monitor the node health or status of virtual machines so I,ve decided to write a script. 
-
 **But there are some automated tools then why are you using this.??**
-
 In our orgnization we are not using such tools because these tools are restricted the generating parameters but in my script i am fetching more parameters which is not provided by these tools.
 
 ## First shell script
@@ -102,7 +100,7 @@ df -h
 echo "print the memory"
 free -g
 
-echo "print the nproc"
+echo "print the CPU"
 nproc
 ```
 Output should look like
