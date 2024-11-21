@@ -90,7 +90,7 @@ vi nodehealth.sh
 # Date: 08/09/2024
 #
 # This script outputs the node health
-#
+# 
 # Version:v1
 #######################
 set -x #debug mode
@@ -344,9 +344,9 @@ using vim command
 vim -r <file-name>
 ```
 #### Note:
-whatever action that you are performing using your keyoard or you are performing using some commands okay lets say you are using a kill command, kill command is basically used to kill a process so if a java process is running and you want to kill it so what you will say kill -9 java. so if the name of the process is java or you the process ID lets say the process ID is one one one one
+whatever action that you are performing using your keyoard or using some commands, lets say you are using a kill command, kill command is basically used to kill a process so if a java process is running and you want to kill it so kill -9 java. If the name of the process is java or the process ID lets say the process ID is 1111 then`kill -9 <process-id>`.
 
--9 ---> instructs the linuc compiler or the Linux kernel to say okay kill this specific process with this process id.
+-9 ---> instructs the linux compiler or Linux kernel to say okay kill this specific process with this process id.
 when you executing this command there is a signal that is passed to the Linux saying that okay so this person is asking you to kill a specific file so this is a signal.
 
 ctrl+c ---> to terminate the script
@@ -356,13 +356,13 @@ SIGKILL is signal for kill command.
 
 With the help of crontab, we can schedule and run jobs or task in the background automatically at regular intervals.
 
-we can automate process like backup, schedule updates and synchronization of files.
+we can automate the processes like backup, schedule updates and synchronization of files.
 
 format ---> ***** /path/to/script.sh
 
-#### Example
+## Example
 
-##### [1] Scheduling a Job for a Specific Time
+## [1] Scheduling a Job for a Specific Time
 
 job--> full-backup
 
@@ -449,40 +449,13 @@ crontab -e
 
 Break terminates the entire loop, while continue skips the current iteration and proceeds to the next one.
 
-Bash
-#!/bin/bash
+**Break:**
+- When the loop counter i reaches 5, the break statement is executed.
+- This immediately terminates the entire for loop.
+- The numbers 1 to 4 will be printed, and the loop will exit.
 
-# Break example
-for i in {1..10}
-do
-    if [ $i -eq 5 ]
-    then
-        break
-    fi
-    echo $i
-done
-
-# Continue example
-for i in {1..10}
-do
-    if [ $i -eq 5 ]
-    then
-        continue
-    fi
-    echo $i
-done
-Use code with caution.
-
-Explanation:
-
-Break:
-
-When the loop counter i reaches 5, the break statement is executed.
-This immediately terminates the entire for loop.
-The numbers 1 to 4 will be printed, and the loop will exit.
-Continue:
-
-When the loop counter i reaches 5, the continue statement is executed.
-This skips the remaining part of the current iteration.
-The loop proceeds to the next iteration, and the number 5 will not be printed.
-The numbers 1 to 4, 6 to 10 will be printed.
+**Continue:**
+- When the loop counter i reaches 5, the continue statement is executed.
+- This skips the remaining part of the current iteration.
+- The loop proceeds to the next iteration, and the number 5 will not be printed.
+- The numbers 1 to 4, 6 to 10 will be printed.
