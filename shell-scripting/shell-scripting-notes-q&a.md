@@ -29,7 +29,7 @@ vi test.sh
 #!/bin/bash
 echo "My name is honey"
 ```
-save it and change the permission to executable and then execute the script
+save it and change the permission to executable`chmod +x test.sh` and then execute the script
 
 Run this script `sh my-shell.sh` or `./my-shell.sh`
 
@@ -52,9 +52,11 @@ My name is honey
 
 `5. Why are you using shell scripting?`
 
-I have automated all the node health of my virtual machines so we have some close to thousand machines and and every time it is difficult to monitor the node health or status of this virtual machine so I,ve decided to write a script.
-there are some automated tools then why are you using this.
-in our orgnization we are not using such tools or you can simply say that you know these tools are restricted for generating some parametersonly a restricted number of parameters but in my script i am fetching more parameters that are not provided by these tools
+I have automated all the node health of my virtual machines so we have some close to thousand machines and every time it is difficult to monitor the node health or status of virtual machines so I,ve decided to write a script. 
+
+**But there are some automated tools then why are you using this.??**
+
+In our orgnization we are not using such tools because these tools are restricted the generating parameters but in my script i am fetching more parameters which is not provided by these tools.
 
 ## First shell script
 
