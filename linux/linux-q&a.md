@@ -120,7 +120,15 @@ command
 cat /etc/os-release
 ```
 
-`21. What is 'tar' command used for in linux, and how would you create  and extract tar archives ?`
+`21. What is the purpose of the "rsync" command?`
+
+The "rsync" command is used for efficient file synchronization and
+transfer between systems
+```
+rsync <file-name> <desination>
+```
+
+`22. What is 'tar' command used for in linux, and how would you create  and extract tar archives ?`
 
 It is used to combine multiple files into one.
 
@@ -154,31 +162,31 @@ tar -xvf file.tar
 ```
 result:- file
 
-`22. What is SSH and how does it work?`
+`23. What is SSH and how does it work?`
 
 SSH (Secure Shell) is a cryptographic network protocol used for
 secure remote login, command execution, and file transfer between
 computers. It encrypts the communication between the client and server.
 
-`23. How do you start and stop services in Linux?`
+`24. How do you start and stop services in Linux?`
 
 Service management varies among distributions. In systemd-based
 systems, you can use commands like "systemctl start service_name" and
 "systemctl stop service_name" to start and stop services.
 
 
-`24. How do you mount a filesystem in Linux?`
+`25. How do you mount a filesystem in Linux?`
 
 The "mount" command is used to attach a filesystem to the directory
 tree.
 
 
-`25. What is the purpose of the "chroot" command?`
+`26. What is the purpose of the "chroot" command?`
 
 The "chroot" command is used to change the root directory for a
 process, creating a separate environment with its own root directory
 
-`26. What is the purpose of the "iptables" command?`
+`27. What is the purpose of the "iptables" command?`
 
 The "iptables" command is used for configuring the Linux kernel
 firewall, which filters network traffic based on user-defined rules.
