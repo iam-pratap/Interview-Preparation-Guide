@@ -15,7 +15,7 @@ including all the commits and branches.
 `3. How do you create a new Git repository?`
 
 To create a new Git repository, you can navigate to the desired
-directory in your terminal and use the command `git init`. This command
+directory in your terminal and use the command ***git init***. This command
 initializes a new empty Git repository in the current directory.
 
 `4. What is the difference between Git and GitHub?`
@@ -40,16 +40,16 @@ initializes a new empty Git repository in the current directory.
 
 `6. What is the purpose of the "git clone" command?`
 
-The `git clone` command is used to create a local copy of a remote Git
+The ***git clone*** command is used to create a local copy of a remote Git
 repository. It downloads the entire repository, including all its files,
 commit history, and branches, to your local machine.
 
 `7. How do you commit changes in Git?`
 
 To commit changes in Git, you need to follow these steps:
-1. Use the command `git add <filename>` to stage the changes you want
+1. Use the command ***git add <filename>*** to stage the changes you want
 to include in the commit.
-2. Use the command `git commit -m "Commit message"` to create a new
+2. Use the command ***git commit -m "Commit message"*** to create a new
 commit with the staged changes. The commit message should provide a
 brief description of the changes.
 
@@ -59,14 +59,12 @@ The ‘.gitignore’ file tells Git which files and folders to ignore when track
 
 `9. What is the difference between git fetch and git pull?`
 
-**Git Fetch**
-`git fetch` only downloads the latest changes from the remote repository,
+***git fetch*** only downloads the latest changes from the remote repository,
 but it doesn't automatically merge them. It updates the remote-tracking
 branches, allowing you to review the changes before merging.
 
-**Git Pull**
-`git pull` is a combination of two commands: `git fetch` and `git
-merge`. It fetches the latest changes from the remote repository and
+***git pull*** is a combination of two commands: ***git fetch*** and ***git
+merge***. It fetches the latest changes from the remote repository and
 automatically merges them with the local branch.
 
 `10. How do you check the 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀 between 𝘁𝘄𝗼 𝗰𝗼𝗺𝗺𝗶𝘁𝘀 in Git?`
@@ -80,25 +78,26 @@ git diff <commit1> <commit2>
 
 `11. How do you check the 𝘀𝘁𝗮𝘁𝘂𝘀 of the 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗱𝗶𝗿𝗲𝗰𝘁𝗼𝗿𝘆 in Git?`
 
+command:
+```
 git status
-
+```
 `12. What is Git conflict? How to resolve a conflict in Git?`
 
-When same name file having different content in different branches, if you do merge, conflicts occur
-solution-->resolve conflict then add and commit.
+When same name file having different content in different branches, if you do merge, conflicts occur.
 
 When a merge conflict occurs, it means that Git is unable to
 automatically merge the changes from different branches. To resolve the
 conflict, you need to manually edit the conflicting files to choose the
-desired changes. After resolving the conflicts, you can use the `git add`
-command to stage the changes, followed by `git commit` to complete the
-merge
+desired changes. After resolving the conflicts, you can use the ***git add***
+command to stage the changes, followed by ***git commit*** to complete the
+merge.
 
 `13. How do you push changes to a remote Git repository?`
 
-To push changes to a remote Git repository, you can use the `git
-push` command followed by the name of the remote repository and the
-branch you want to push. For example, `git push origin main` pushes the
+To push changes to a remote Git repository, you can use the ***git
+push*** command followed by the name of the remote repository and the
+branch you want to push. For example, ***git push origin main*** pushes the
 local commits to the "main" branch of the remote repository named
 "origin."
 These are just a few common Git interview questions for beginners.
@@ -143,12 +142,12 @@ is a temporary branch created to address critical bugs in a production environme
 `21. How do you merge two branches in Git?`
 
 To merge two branches in Git, you typically follow these steps:
-1. Switch to the branch where you want to merge changes (e.g., `git
-checkout branch-to-merge-into`).
-2. Run the command `git merge branch-to-merge-from`. This merges the
+1. Switch to the branch where you want to merge changes (e.g. ***git
+checkout branch-to-merge-into***).
+2. Run the command ***git merge branch-to-merge-from***. This merges the
 changes from the specified branch into the current branch.
 3. Resolve any merge conflicts, if they occur.
-4. Commit the merge changes using `git commit`.
+4. Commit the merge changes using ***git commit***.
 
 `22. What is the purpose of "git rebase"?`
 
@@ -173,19 +172,19 @@ linear commit history.
 `24. How do you undo the most recent commit in Git?`
 
 To undo the most recent commit in Git, you have a few options:
-- You can use the command `git revert HEAD` to create a new commit
+- You can use the command ***git revert HEAD*** to create a new commit
 that undoes the changes introduced by the last commit.
-- Alternatively, you can use `git reset HEAD~1` to move the branch
+- Alternatively, you can use ***git reset HEAD~1*** to move the branch
 pointer back one commit, effectively removing the last commit. This
 operation discards the commit and any changes associated with it.
 
 `25. What is the "git stash" command used for?`
 
-The `git stash` command allows you to temporarily save changes that
+The ***git stash*** command allows you to temporarily save changes that
 are not ready to be committed yet. It's useful when you need to switch to a
 different branch or apply a hotfix but don't want to commit incomplete
-work. You can later retrieve the changes from the stash using `git stash
-apply` or `git stash pop`.
+work. You can later retrieve the changes from the stash using ***git stash
+apply*** or ***git stash pop***.
 
 `26. What is the difference between git revert and git reset?`
 
@@ -202,13 +201,13 @@ apply` or `git stash pop`.
 `27. How do you revert a file to a previous commit in Git?`
 
 To revert a file to a previous commit in Git, you can use the command
-`git checkout <commit-hash> -- <file>`. This command replaces the
+***git checkout <commit-hash> -- <file>***. This command replaces the
 content of the specified file with the version from the given commit. It
 effectively discards the changes made to the file since that commit.
 
 `28. What is the purpose of the "git cherry-pick" command?`
 
-The `git cherry-pick` command is used to apply a specific commit
+The ***git cherry-pick*** command is used to apply a specific commit
 from one branch onto another branch. It allows you to select individual
 commits and apply them to a different branch, without merging the entire
 branch. Cherry-picking is useful when you want to selectively apply
@@ -216,21 +215,21 @@ changes from one branch to another.
 
 `29. How do you delete a branch in Git?`
 
-To delete a branch in Git, you can use the command `git branch -d
-<branch-name>`. This deletes the specified branch locally. If the branch
-has not been merged, you can use `git branch -D <branch-name>` to force
-delete it. To delete a remote branch, you can use `git push origin --delete
-<branch-name>`.
+To delete a branch in Git, you can use the command ***git branch -d
+<branch-name>***. This deletes the specified branch locally. If the branch
+has not been merged, you can use ***git branch -D <branch-name>*** to force
+delete it. To delete a remote branch, you can use ***git push origin --delete
+<branch-name>***.
 
 `30. How do you view the commit history in Git?`
 
-You can use the command `git log` to view the commit history in Git
+You can use the command ***git log*** to view the commit history in Git
 
 `31. What is Git rebase, and when would you use it?`
 
 Git rebase is a command used to modify the commit history of a
 branch. It allows you to move, combine, or edit commits. You would use
-`git rebase` when you want to:
+***git rebase*** when you want to:
 - Incorporate changes from one branch onto another with a linear commit
 history.
 - Squash multiple commits into a single commit for a cleaner history.
@@ -238,9 +237,9 @@ history.
   
 `32. How can you recover a deleted commit in Git?`
 
-If a commit has been deleted or lost, you can use the `git reflog`
+If a commit has been deleted or lost, you can use the ***git reflog***
 command to find the commit's reference and recover it. Once you identify
-the commit hash, you can create a new branch or use `git cherry-pick` to
+the commit hash, you can create a new branch or use ***git cherry-pick*** to
 apply the changes from the recovered commit to the appropriate branch.
 These advanced-level Git interview questions cover topics that require a
 deeper understanding of Git's features and workflows. Keep practicing and
