@@ -224,5 +224,5 @@ You can use the command ***git log*** to view the commit history in Git
 
 If a commit has been deleted or lost, you can use the ***git reflog***
 command to find the commit's reference and recover it. Once you identify
-the commit hash, you can create a new branch or use ***git cherry-pick*** to
+the commit hash, you can create a new branch or use ***git cherry-pick*** followed by the **commit-id** to
 apply the changes from the recovered commit to the appropriate branch.
