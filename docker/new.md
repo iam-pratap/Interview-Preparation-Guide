@@ -187,7 +187,7 @@ Kubernetes, which provide built-in monitoring capabilities.
 container monitoring, such as Prometheus, cAdvisor, or Datadog.
 - Implement centralized logging by collecting and analyzing container logs
 using tools like ELK Stack (Elasticsearch, Logstash, Kibana) or Splunk.
-Docker interview question and answers for ADVANCED LEVEL
+
 
 `20. What is Docker orchestration, and why is it important?`
 
@@ -271,19 +271,7 @@ environment to
 the updated one. This approach eliminates downtime as the switch
 happens instantaneously.
 
-`26. What is Docker content trust, and how does it enhance security?`
-
-Docker Content Trust is a security feature that allows you to verify the
-authenticity and integrity of Docker images. It uses digital signatures and
-cryptographic verification to ensure that only trusted images are used in
-your environment.
-When Docker Content Trust is enabled, Docker only allows the use of
-signed images. Images must be signed by trusted entities and the
-signatures must match the content of the image. This prevents the use of
-unauthorized or tampered images, reducing the risk of running
-compromised containers in your infrastructure.
-
-`27. Explain the concept of multi-stage builds in Docker.`
+`26. Explain the concept of multi-stage builds in Docker.`
 
 Multi-stage builds in Docker allow you to optimize the size and efficiency
 of your Docker images. With multi-stage builds, you can separate the build
@@ -303,12 +291,12 @@ FROM alpine
 # Final stage
 COPY --from=build /app /app
 ```
-`28. What are distro less images in Docker?`
+`27. What are distro less images in Docker?`
 
 Distro-less images contain only your application and its runtime dependencies with a very minimum operating system libraries. They do not contain package managers, shells or any other programs you would expect to find in a standard Linux distribution.
 They are very small and lightweight images.
 
-`29. How can you secure communication between Docker containers?`
+`28. How can you secure communication between Docker containers?`
 
 To secure communication between Docker containers, you can implement
 the following practices:
@@ -323,14 +311,14 @@ securely manage and distribute sensitive information.
 - Regularly update and patch containers and their underlying host systems
 to address any security vulnerabilities.
 
-`30. What is the difference between PUBLISH and EXPOSE`
+`29. What is the difference between PUBLISH and EXPOSE`
 
 - If you specify neither **"expose"** nor **"-p"**, the service in the container will only be accessible from inside the container.
 - If you **"expose"** a port, the service in the container is not accessible from outside docker, (container-to-container)this is good for inter-container communication.
 - If you **"expose"** and **"-p"** a port, the service in the container is accessible from anywhere, even outside docker.
 - If you do **"-p"** but do not **"expose"** docker does an implicit expose. This is because if a port is open to the public, it is automatically also open to the other docker containers. Hence **"-p"** includes **"expose"**.
 
-`31. Real time Challenges with Docker?`
+`30. Real time Challenges with Docker?`
 
 - Docker is a single daemon process. Which can cause a single point of failure, If the Docker daemon goes down for some reason all the application are down.
 - Docker Daemon runs as a root user. Which is a security threat. Any process running as a root  can have adverse effects. when it is comprised for security reasons, it can impact other applications or containers on the host.
