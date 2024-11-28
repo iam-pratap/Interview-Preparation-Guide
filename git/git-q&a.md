@@ -185,13 +185,14 @@ apply*** or ***git stash pop***.
 - It can be used to undo accidental changes or correct changes made while working with others.
 - Preserves the commit history by creating a new commit that undoes the change.
 - It is a safer option when working with other developers because it doesn’t affect others’ work.
-- ***git revert <commit-id>***
+- ***git revert [commit-id]***
 
 **Git Reset**
 - It is more suitable for editing your local changes and cleaning up the commit history.
 - Rewrites the commit history by undoing the operations.
 - It can cause other developers to lose history and have conflicts in their work.
-- To reset staging area ***git reset <file-name>***
+- To reset staging area ***git reset [file-name]***
+  
 `26. How do you revert a file to a previous commit in Git?`
 
 To revert a file to a previous commit in Git, you can use the command
