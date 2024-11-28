@@ -14,16 +14,16 @@ same way across different systems.
 
 `3. What are the benefits of using Docker?`
 
-- Portability: Docker containers can run on any system that supports
+- **Portability**: Docker containers can run on any system that supports
 Docker, making it easy to deploy applications across different
 environments.
-- Scalability: Docker allows you to scale your application horizontally by
+- **Scalability**: Docker allows you to scale your application horizontally by
 running multiple containers on different hosts.
-- Isolation: Containers provide isolation between applications and their
+- **Isolation**: Containers provide isolation between applications and their
 dependencies, preventing conflicts and ensuring consistent behavior.
-- Efficiency: Docker uses a layered file system and shared resources,
+- **Efficiency**: Docker uses a layered file system and shared resources,
 enabling faster startup times and efficient resource utilization.
-- Version control: Docker enables versioning of containers, allowing you
+- **Version control**: Docker enables versioning of containers, allowing you
 to roll back to previous versions if needed.
 
 `4. How does Docker differ from virtual machines?`
@@ -50,7 +50,7 @@ Docker image. It specifies the base image, the application's dependencies,
 environment variables, and other configurations needed to create the
 image.
 
-`5. What is Docker LifeCycle ?`
+`7. What is Docker LifeCycle ?`
 
 Users would create a Dockerfile with a set of instruction or commands that defines a docker image. For example, which base image to choose? what dependencies should be installed for the application to run ? etc..
 
@@ -59,7 +59,7 @@ Docker images act as a set of instructions to build a Docker container. It can b
 ![Screenshot 2023-02-08 at 4 32 13 PM](https://user-images.githubusercontent.com/43399466/217511949-81f897b2-70ee-41d1-b229-38d0572c54c7.png)
 
 
-`7. How do you create a Docker container from an image?`
+`8. How do you create a Docker container from an image?`
 
 To create a Docker container from an image, you use the `docker run`
 command followed by the image name. For example:
@@ -68,7 +68,7 @@ docker run image-name
 ```
 This command will start a new container based on the specified image.
 
-`8. How do you share data between a Docker container and the host
+`9. How do you share data between a Docker container and the host
 system?`
 
 You can share data between a Docker container and the host system using
@@ -76,17 +76,6 @@ Docker volumes or bind mounts. Docker volumes are managed by Docker
 and are stored in a specific location on the host system. Bind mounts, on
 the other hand, allow you to mount a directory or file from the host system
 into the container.
-
-`9. How can you link multiple Docker containers together?`
-
-Docker provides a feature called container networking, which allows you
-to link multiple containers together. You can create a user-defined network
-using the `docker network create` command and then connect containers to
-that network using the `--network` option when running containers.
-Alternatively, you can use Docker Compose, a tool for defining and
-running multi-container Docker applications. Compose uses a YAML file
-to define the services and their relationships, making it easier to manage
-multiple containers.
 
 `10. How can you troubleshoot issues with Docker containers?`
 
@@ -100,7 +89,7 @@ inspect`.
 - Checking resource utilization on the
 host system to ensure it has enough capacity.
 
-`4. What is Docker Registry and why is it used?`
+`11. What is Docker Registry and why is it used?`
 
 Docker Registry is a service for storing and distributing Docker images. It
 serves as a centralized repository for Docker images that can be shared
@@ -110,17 +99,17 @@ Docker Registry allows you to push and pull images, making it easier to
 share and distribute containerized applications. It plays a crucial role in
 enabling collaboration and seamless deployment of Docker containers.
 
-`6. What is the difference between docker COPY and docker ADD`
+`12. What is the difference between docker COPY and docker ADD`
 
 Docker ADD can copy the files from a URL unlike Docker COPY which can only copy files from host system into the container.
 
-`7. What is the difference between CMD and ENTRYPOINT?`
+`13. What is the difference between CMD and ENTRYPOINT?`
 
 **CMD:** Sets default parameters that can be overridden from the Docker Command Line Interface (CLI) when a container is running.
 **ENTRYPOINT:** Default parameters that cannot be overridden when Docker Containers run with CLI parameters
 
 
-`5. Explain the concept of Docker volumes and their importance.`
+`14. Explain the concept of Docker volumes and their importance.`
 
 Docker volumes are a way to persist and manage data associated with
 Docker containers. A volume is a directory stored outside the container's
@@ -132,7 +121,7 @@ sharing between containers. They allow you to decouple data from the
 container itself, making it easier to manage and maintain applications that
 require persistent storage.
 
-`6. What are Docker labels and how are they used?`
+`15. What are Docker labels and how are they used?`
 
 Docker labels are key-value metadata pairs that can be applied to Docker
 objects like containers, images, and volumes. They provide a way to attach
@@ -143,7 +132,7 @@ images based on their characteristics, such as version, environment, or
 purpose. They can be utilized for filtering, searching, and implementing
 custom automation or tooling around Docker resources.
 
-`7. How can you pass environment variables to a Docker container?`
+`16. How can you pass environment variables to a Docker container?`
 
 You can pass environment variables to a Docker container using the `-e` or
 `--env` flag when running the container with the `docker run` command.
@@ -154,7 +143,7 @@ docker run -e VARIABLE_NAME=value image_name
 Alternatively, you can define environment variables in a Docker Compose
 file using the `environment` key under a service definition.
 
-`8. Explain the concept of Docker overlay network.`
+`17. Explain the concept of Docker overlay network.`
 
 Docker overlay network is a built-in network driver that allows
 communication between Docker services running on different Docker
@@ -167,7 +156,7 @@ with the `--driver overlay` option. They enable seamless communication
 and cooperation between services running on different nodes within a
 Docker swarm.
 
-`9. How can you secure Docker containers?`
+`18. How can you secure Docker containers?`
 
 To secure Docker containers, you can implement the following best
 practices:
@@ -187,7 +176,7 @@ logging.
 - Apply container runtime security tools and scan images for
 vulnerabilities before deployment.
 
-`10. How can you monitor Docker containers?`
+`19. How can you monitor Docker containers?`
 
 There are several ways to monitor Docker containers:
 - Use the `docker stats` command to view real-time resource usage
@@ -200,7 +189,7 @@ container monitoring, such as Prometheus, cAdvisor, or Datadog.
 using tools like ELK Stack (Elasticsearch, Logstash, Kibana) or Splunk.
 Docker interview question and answers for ADVANCED LEVEL
 
-`1. What is Docker orchestration, and why is it important?`
+`20. What is Docker orchestration, and why is it important?`
 
 Docker orchestration is the process of managing and coordinating multiple
 Docker containers to work together as a distributed application. It involves
@@ -212,7 +201,7 @@ automates tasks that would be cumbersome and error-prone to perform
 manually, and it ensures that containers are deployed consistently and
 reliably across different hosts or a cluster of nodes.
 
-`2. Explain the role of container registries in a containerized
+`21. Explain the role of container registries in a containerized
 environment.`
 
 Container registries play a crucial role in a containerized environment.
@@ -226,7 +215,7 @@ container registries include Docker Hub, Amazon ECR, Google Container
 Registry, and private registries like Harbor.
 
 
-`4. What are the benefits of using Docker secrets?`
+`22. What are the benefits of using Docker secrets?`
 
 Docker secrets are a secure way to manage sensitive data, such as
 passwords, API keys, or certificates, within Docker containers. The
@@ -240,7 +229,7 @@ Swarm can automatically distribute secrets to the appropriate containers,
 simplifying the management of sensitive information in a distributed
 environment.
 
-`8. what are the networking types in Docker and what is the default?`
+`23. what are the networking types in Docker and what is the default?`
 
 The default networking in Docker is Bridge
 Howerver, you can change the default type and configure one of the
@@ -249,7 +238,7 @@ Howerver, you can change the default type and configure one of the
 3. Host
 4. MacVlan 
 
-`5. How does Docker handle container networking across multiple
+`24. How does Docker handle container networking across multiple
 hosts?`
 
 Docker provides various networking options for container communication
@@ -266,7 +255,7 @@ networks using the `--network=host` option. This allows the containers to
 share the host's network stack, enabling direct communication with the
 host's network interfaces.
 
-`6. How can you achieve zero-downtime deployments in Docker?`
+`25. How can you achieve zero-downtime deployments in Docker?`
 
 To achieve zero-downtime deployments in Docker, you can use strategies
 like rolling updates and blue-green deployments:
@@ -282,7 +271,7 @@ environment to
 the updated one. This approach eliminates downtime as the switch
 happens instantaneously.
 
-`7. What is Docker content trust, and how does it enhance security?`
+`26. What is Docker content trust, and how does it enhance security?`
 
 Docker Content Trust is a security feature that allows you to verify the
 authenticity and integrity of Docker images. It uses digital signatures and
@@ -294,7 +283,7 @@ signatures must match the content of the image. This prevents the use of
 unauthorized or tampered images, reducing the risk of running
 compromised containers in your infrastructure.
 
-`8. Explain the concept of multi-stage builds in Docker.`
+`27. Explain the concept of multi-stage builds in Docker.`
 
 Multi-stage builds in Docker allow you to optimize the size and efficiency
 of your Docker images. With multi-stage builds, you can separate the build
@@ -314,12 +303,12 @@ FROM alpine
 # Final stage
 COPY --from=build /app /app
 ```
-`10. What are distro less images in Docker?`
+`28. What are distro less images in Docker?`
 
 Distro-less images contain only your application and its runtime dependencies with a very minimum operating system libraries. They do not contain package managers, shells or any other programs you would expect to find in a standard Linux distribution.
 They are very small and lightweight images.
 
-`9. How can you secure communication between Docker containers?`
+`29. How can you secure communication between Docker containers?`
 
 To secure communication between Docker containers, you can implement
 the following practices:
@@ -334,21 +323,21 @@ securely manage and distribute sensitive information.
 - Regularly update and patch containers and their underlying host systems
 to address any security vulnerabilities.
 
-`11. What is the difference between PUBLISH and EXPOSE`
+`30. What is the difference between PUBLISH and EXPOSE`
 
 - If you specify neither **"expose"** nor **"-p"**, the service in the container will only be accessible from inside the container.
 - If you **"expose"** a port, the service in the container is not accessible from outside docker, (container-to-container)this is good for inter-container communication.
 - If you **"expose"** and **"-p"** a port, the service in the container is accessible from anywhere, even outside docker.
 - If you do **"-p"** but do not **"expose"** docker does an implicit expose. This is because if a port is open to the public, it is automatically also open to the other docker containers. Hence **"-p"** includes **"expose"**.
 
-`11. Real time Challenges with Docker?`
+`31. Real time Challenges with Docker?`
 
 - Docker is a single daemon process. Which can cause a single point of failure, If the Docker daemon goes down for some reason all the application are down.
 - Docker Daemon runs as a root user. Which is a security threat. Any process running as a root  can have adverse effects. when it is comprised for security reasons, it can impact other applications or containers on the host.
 - **Resource Constraints:** If you're running too many containers on a single host, you may experience issues with resource constraints. This can result in slow performance or crashes.
 
-13. What are the Production issue that you faced with docker containers and how
- did you silve it?
+`31. What are the Production issue that you faced with docker containers and how
+ did you silve it?`
 
 Previously we were using ubuntu base images or previously we were using 
 even in the final stage we were using ubuntu images or python runtime or
